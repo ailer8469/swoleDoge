@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shootDown.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>小廢狗遊戲</title>
+</head>
+<body> 
+    <canvas id="collisionCanvas"     
+    type="2d"   
+    @touchstart="touchStart"  
+    @touchmove="touchMove"  
+    @touchend="touchEnd">
+    </canvas>
+    <canvas id="canvas"
+    type="2d"   
+    @touchstart="touchStart"  
+    @touchmove="touchMove"  
+    @touchend="touchEnd">
+    </canvas>
+
+    <div class="box">
+        <h1>GAME OVER !</h1>
+        <p >Your score is  <span id="gameScore"> 0 </span></p>
+        <a href="#" class="button" id="restart">RESTART</a>
+    </div>
+
+    <script src="shootDown.js"></script>
+</body>
+</html>

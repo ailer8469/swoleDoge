@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Staatliches', cursive;
+}
+a{
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('./img/doge_meme.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+canvas{
+    cursor: url('./img/hammer.png') ,default;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+#collisionCanvas{
+    opacity: 0;
+}
+
+.box{
+    z-index: 10;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    color: white;
+    text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000,2px 2px 2px black;
+    font-size: 4em;
+    white-space: nowrap;
+}
+.box h1{
+    font-size: 2em;
+    margin-bottom: -35px;
+}
+#gameScore{
+    color:tomato;
+}
+.button{
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 20px 0;
+    position: relative;
+    color: #ecf0f1;
+    font-size: 0.8em;
+}
+#restart{
+    background-color: #0054a9;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#restart:hover{
+-webkit-transform: rotate(5deg);
+-ms-transform: rotate(5deg);
+-o-transform: rotate(5deg);
+transform: rotate(5deg);
+}
+
+
+@media screen and (max-width: 700px) {
+    .box h1{
+        font-size: 1.5em;
+        margin-bottom: -20px;
+    }
+    .box p{
+        font-size: 0.8em;
+    }
+    #restart{
+        font-size: 0.5em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .box h1{
+        font-size: 1.2em;
+    }
+    .box p{
+        font-size: 0.6em;
+    }
+    #restart{
+        font-size: 0.5em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .box h1{
+        font-size: 1em;
+        margin-bottom: -10px;
+    }
+    .box p{
+        font-size: 0.5em;
+    }
+}
